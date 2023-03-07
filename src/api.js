@@ -5,7 +5,9 @@ const router = express.Router()
 const cors = require('cors')
 
 
-app.use(cors())
+app.use(cors({
+    origin: ['http://localhost:3000']
+}))
 
 router.get("/get", (req, res) => {
     res.json({
